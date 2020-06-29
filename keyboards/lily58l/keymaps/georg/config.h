@@ -21,10 +21,13 @@
   #define RGBLIGHT_SLEEP //  the RGB lighting will be switched off when the host goes to sleep
 #endif
 
+<<<<<<< HEAD
 #ifdef RGB_MATRIX_ENABLE
   #define RGB_MATRIX_KEYPRESSES
 #endif
 
+=======
+>>>>>>> my_keymap
 #define EE_HANDS
 
 // Master is where the usb cable is plugged in
