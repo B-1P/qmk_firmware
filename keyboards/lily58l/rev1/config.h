@@ -43,6 +43,10 @@
 #define RGBLIGHT_SPLIT
 #define RGBLIGHT_LIMIT_VAL 120
 
+#define DRIVER_LED_TOTAL 70
+#define RGB_MATRIX_SPLIT { 35, 35 }
+
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS RGBLIGHT_LIMIT_VAL
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
