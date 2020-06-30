@@ -23,6 +23,12 @@
 
 #ifdef RGB_MATRIX_ENABLE
   #define RGB_MATRIX_KEYPRESSES
+  #define RGB_MATRIX_HUE_STEP 3 // number of steps to cycle through the hue by
+  #define RGB_MATRIX_SAT_STEP 6 // number of steps to increment the saturation by
+  #define RGB_MATRIX_VAL_STEP 6 // number of steps to increment the brightness by
+
+//  #define RGBLIGHT_EFFECT_RGB_TEST
+  #define RGB_MATRIX_SLEEP //  the RGB lighting will be switched off when the host goes to sleep
 #endif
 
 #define EE_HANDS
