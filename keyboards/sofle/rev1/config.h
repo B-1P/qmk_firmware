@@ -4,7 +4,7 @@
 #define VENDOR_ID       0xFC32
 #define PRODUCT_ID      0x0287
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    JosefAdamcik
+#define MANUFACTURER    BhawanPanesar
 #define PRODUCT         Sofle
 #define DESCRIPTION     Sofle is 6×4+5keys+encoder column-staggered split keyboard.
 
@@ -38,3 +38,26 @@
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 
+
+#define RGB_DI_PIN D3
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 255
+#define RGB_MATRIX_STARTUP_VAL 8
+#define RGB_DISABLE_TIMEOUT 10000
+
+#define DRIVER_LED_TOTAL 82
+#define RGB_MATRIX_SPLIT { 41, 41 }
+#define RGB_MATRIX_CENTER {112, 36}
+#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_BREATHING 
+#define SPLIT_TRANSPORT_MIRROR
+#define RGB_MATRIX_KEYPRESSES
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+
+
+#ifndef NO_DEBUG
+#define NO_DEBUG
+#endif // !NO_DEBUG
+#if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
+#define NO_PRINT
+#endif // !NO_PRINT
+
+#define NO_ACTION_ONESHOT
