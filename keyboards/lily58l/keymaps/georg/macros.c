@@ -19,6 +19,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
         eeconfig_update_user(user_config.raw);
       }
       return false;
+    case DO_REISUB:
+      if (record->event.pressed) {
+        SEND_STRING(SS_LALT(
+          SS_DOWN(X_PSCR) "r" SS_DELAY(100) "e" SS_DELAY(1000) "i"
+          SS_DELAY(100) "s" SS_DELAY(1000) "u" SS_DELAY(100) "b" SS_UP(X_PSCR)
+        ));
+      }
+      return false;
 	}
 
 	if (!handle_all_keys(keycode, record))
@@ -73,3 +81,4 @@ void post_process_record_user(uint16_t keycode, keyrecord_t *record) {
 			break;
 	}
 }
+

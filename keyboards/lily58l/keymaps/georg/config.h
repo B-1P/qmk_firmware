@@ -1,14 +1,16 @@
 #pragma once
 
 #define TAPPING_TERM 200
-#define PERMISSIVE_HOLD
-#define TAPPING_FORCE_HOLD
+// #define PERMISSIVE_HOLD
+// #define TAPPING_FORCE_HOLD
 
 #undef DEBOUNCE
 #define DEBOUNCE 5 
 
 #define OLED_FRAMERATE 30
 #define OLED_FONT_H "common/glcdfont.c"
+
+#undef RGBLIGHT_ENABLE
 
 #ifdef RGBLIGHT_ENABLE
   // #define RGBLIGHT_ANIMATIONS
@@ -36,7 +38,9 @@
   #define DISABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
   #define DISABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS
   #define DISABLE_RGB_MATRIX_SPLASH
+  #define DISABLE_RGB_MATRIX_MULTISPLASH
   #define DISABLE_RGB_MATRIX_SOLID_SPLASH
+  #define DISABLE_RGB_MATRIX_SOLID_MULTISPLASH
 #endif
 
 #define EE_HANDS
@@ -45,7 +49,10 @@
 // #define MASTER_LEFT
 #define MASTER_LEFT
 
-
 // If you are using an Elite C rev3 on the slave side, uncomment the lines below:
-// #define SPLIT_USB_DETECT
+#define SPLIT_USB_DETECT
 // #define NO_USB_STARTUP_CHECK
+
+#define NO_ACTION_ONESHOT
+#undef PERMISSIVE_HOLD
+#define TAPPING_FORCE_HOLD

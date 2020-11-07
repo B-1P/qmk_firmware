@@ -15,6 +15,7 @@ enum layers {
 enum custom_keycodes {
 	TOG_DK = SAFE_RANGE,  // Toggle dead keys
   TOG_SCE,  // Toggle switch caps lock and escape
+  DO_REISUB,  // Do magic reisub resquence automatically
 };
 
 #endif
