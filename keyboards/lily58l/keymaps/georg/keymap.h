@@ -18,4 +18,16 @@ enum custom_keycodes {
   DO_REISUB,  // Do magic reisub resquence automatically
 };
 
+enum unicode_names {
+  AE,
+  S_AE,
+  UE,
+  S_UE,
+  OE,
+  S_OE,
+  SS,
+  S_SS
+};
+
+extern const uint32_t PROGMEM unicode_map[];
 #endif

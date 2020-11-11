@@ -1,5 +1,18 @@
 #include "keymap.h"
 
+#define UM(A) XP(A, S_ ## A)
+
+const uint32_t PROGMEM unicode_map[] = {
+  [AE] = 0x00E4,
+  [S_AE] = 0x00C4,
+  [UE] = 0x00FC,
+  [S_UE] = 0x00DC,
+  [OE] = 0x00F6,
+  [S_OE] = 0x00D6,
+  [SS] = 0x00DF,
+  [S_SS] = 0x1E9E
+};
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -63,8 +76,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_RAISE] = LAYOUT( \
   _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______, \
-  _______, ALGR(KC_S), KC_7, KC_8,    KC_9,    KC_COMM,                     _______, ALGR(KC_Y), _______, ALGR(KC_P), _______, _______, \
-  _______, ALGR(KC_Q), KC_4, KC_5,    KC_6,    KC_0,                        KC_MPRV, KC_MSEL, KC_MPLY, KC_MNXT, KC_BRIU, _______, \
+  _______, UM(SS),  KC_7,    KC_8,    KC_9,    KC_COMM,                     _______, UM(UE),  _______, UM(OE),  _______, _______, \
+  _______, UM(AE),  KC_4,    KC_5,    KC_6,    KC_0,                        KC_MPRV, KC_MSEL, KC_MPLY, KC_MNXT, KC_BRIU, _______, \
   _______, _______, KC_1,    KC_2,    KC_3,    KC_DOT,   _______, RGB_TOG,  KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_BRID, _______, \
                              _______, _______, _______,  _______, _______,  _______, _______, KC_RALT \
 ),
