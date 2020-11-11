@@ -9,7 +9,7 @@ MOUSEKEY_ENABLE = no      # Mouse keys
 UNICODE_ENABLE  = no
 COMMAND_ENABLE  = no
 
-UNICODEMAP_ENABLE = yes
+UNICODEMAP_ENABLE = no
 
 # CONSOLE_ENABLE = yes 
 SRC += oled.c encoder.c macros.c settings.c

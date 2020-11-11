@@ -10,8 +10,6 @@
 #define OLED_FRAMERATE 30
 #define OLED_FONT_H "common/glcdfont.c"
 
-#define UNICODE_SELECTED_MODES UC_LNX
-
 #undef RGBLIGHT_ENABLE
 
 #ifdef RGBLIGHT_ENABLE

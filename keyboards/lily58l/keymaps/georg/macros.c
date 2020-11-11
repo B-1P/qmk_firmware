@@ -27,6 +27,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
         ));
       }
       return false;
+    case U_AE:
+    case U_UE:
+    case U_OE:
+      if (record -> event.pressed) {
+        SEND_STRING(SS_TAP(X_RALT));
+        char c[3] = {keycode - SAFE_RANGE, '"', 0};
+        send_string(c);
+      }
+      return false;
+    case U_SS:
+      if (record -> event.pressed) {
+        SEND_STRING(SS_TAP(X_RALT)"ss");
+      }
+      return false;
 	}
 
 	if (!handle_all_keys(keycode, record))
